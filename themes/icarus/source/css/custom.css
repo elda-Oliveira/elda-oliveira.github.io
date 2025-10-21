@@ -185,3 +185,60 @@ button:hover, .btn:hover {
     text-align: center;
   }
 }
+
+
+/* 🌸 Ajuste do menu no mobile e contraste */
+.navbar {
+  background: linear-gradient(90deg, #b3d5ff 0%, #f1c4ff 100%) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Ícones e textos do menu */
+.navbar-item,
+.navbar-item a,
+.navbar-link {
+  color: #243a5e !important; /* azul suave legível */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Hover com leve destaque */
+.navbar-item:hover,
+.navbar-item a:hover {
+  color: #1e2a44 !important;
+}
+
+/* Estado ativo (menu selecionado) */
+.navbar-item.is-active,
+.navbar-item.is-active a {
+  background: linear-gradient(90deg, #a6d3ff 0%, #f5bfff 100%) !important;
+  color: #1b243d !important;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* Corrige o layout mobile do menu */
+.navbar-menu {
+  background: linear-gradient(180deg, #c8dfff 0%, #f8d3ff 100%) !important;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Ajuste de responsividade */
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-item {
+    margin: 6px 0;
+  }
+
+  .navbar-brand img {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 5px;
+  }
+}
