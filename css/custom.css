@@ -491,3 +491,174 @@ button:hover, .btn:hover {
   color: #339cff;
   text-shadow: 0 0 8px rgba(163, 216, 255, 0.5);
 }
+
+
+/* 🌈 Mostra só a data de postagem e esconde o resto */
+.article-meta .level-item:nth-child(2),
+.article-meta .level-item:nth-child(3),
+.article-meta .level-item:nth-child(4),
+.article-meta .level-item:nth-child(5) {
+  display: none !important;
+}
+
+/* ✨ Estilo da data principal com degradê rosa-azul */
+.article-meta .level-item:first-child {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: linear-gradient(90deg, #ffa7c4, #a3d8ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 8px rgba(255, 200, 240, 0.3);
+  display: inline-block;
+}
+
+/* 💫 Dá um efeito suave de brilho no hover */
+.article-meta .level-item:first-child:hover {
+  text-shadow: 0 0 10px rgba(255, 180, 230, 0.6);
+  transform: scale(1.02);
+  transition: all 0.3s ease-in-out;
+}
+
+/* 🌸 Linha fina degradê abaixo */
+.article-meta::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 100%;
+  margin-top: 6px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #ffa7c4, #a3d8ff);
+  opacity: 0.9;
+}
+
+/* 💙 Título normal com cor neutra e elegante */
+a.link-muted,
+a.link-muted:visited {
+  color: #1a1a1a !important; /* tom escuro suave, legível */
+  font-weight: 700;
+  text-transform: none;
+  transition: all 0.3s ease-in-out;
+  text-shadow: none;
+}
+
+/* 🌸 Rosa quando passa o mouse */
+a.link-muted:hover {
+  color: #ff7fa6 !important; /* rosa suave do seu tema */
+  text-shadow: 0 0 8px rgba(255, 180, 220, 0.5);
+  transform: scale(1.02);
+}
+
+/* 💫 Rosa mais intenso quando o link já foi clicado */
+a.link-muted:active {
+  color: #ff4f8b !important;
+  text-shadow: 0 0 10px rgba(255, 160, 210, 0.6);
+}
+
+
+a.link-muted:hover::after {
+  opacity: 1;
+  background: linear-gradient(90deg, #ffa7c4, #a3d8ff);
+}
+
+
+
+/* 💫 LINKS DOS POSTS RECENTES (widget lateral) */
+.card.widget article.media a {
+  color: #1a1a1a !important; /* neutro normal */
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+/* 💙 Azul pastel ao passar o mouse */
+.card.widget article.media a:hover {
+  color: #5bb7ff !important; /* azul suave */
+  text-shadow: 0 0 6px rgba(160, 220, 255, 0.5);
+  transform: translateY(-1px);
+}
+
+/* 🔹 Remove a linha rosa decorativa */
+.card.widget article.media a::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* ✨ Data e subtítulo neutros */
+.card.widget article.media time,
+.card.widget article.media .media-content {
+  color: #7a7a7a;
+  transition: color 0.3s ease;
+}
+
+/* 💫 Ficam azul pastel no hover */
+.card.widget article.media a:hover time,
+.card.widget article.media a:hover .media-content {
+  color: #5bb7ff;
+}
+
+
+
+/* 🔹 Posiciona a categoria no canto superior direito acima do título */
+.card.widget article.media {
+  position: relative;
+}
+
+/* 💫 Badge de categoria (pequeno e elegante) */
+.card.widget .categories a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 11px;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(90deg, #a3d8ff, #ffa7c4);
+  padding: 2px 8px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 6px rgba(163, 216, 255, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+/* ✨ Efeito leve no hover */
+.card.widget .categories a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 180, 220, 0.6);
+  filter: brightness(1.1);
+}
+
+
+/* 💫 Nome "Near" com degradê animado azul ↔ rosa */
+.author-link {
+  font-weight: 700;
+  text-decoration: none !important;
+  background: linear-gradient(90deg, #5bb7ff, #ff7fa6, #5bb7ff);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 8px rgba(163, 216, 255, 0.4);
+  animation: gradientShift 6s ease-in-out infinite;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* ✨ Ao passar o mouse, o brilho intensifica */
+.author-link:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 15px rgba(255, 180, 230, 0.8);
+  animation: gradientShift 2.5s ease-in-out infinite; /* acelera o efeito */
+}
+
+/* 💗 Efeito de clique */
+.author-link:active {
+  text-shadow: 0 0 18px rgba(255, 160, 220, 1);
+}
+
+/* 🌈 Animação do degradê */
+@keyframes gradientShift {
+  0% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
