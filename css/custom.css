@@ -125,3 +125,273 @@ button:hover, .btn:hover {
 ::-webkit-scrollbar-track {
   background: #ffffff50;
 }
+
+
+/* 🌸 Restaura o degradê pastel translúcido do menu original */
+.navbar {
+  background: linear-gradient(90deg, #b8d9ff 0%, #e6ccff 50%, #f8cfff 100%) !important;
+  box-shadow: 0 3px 15px rgba(160, 190, 255, 0.25);
+  border: none;
+}
+
+/* Itens padrão */
+.navbar-item {
+  color: #ffffff !important;
+  font-weight: 500;
+  margin: 0 10px;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover – efeito leve pastel */
+.navbar-item:hover {
+  background: linear-gradient(90deg, rgba(176, 211, 255, 0.6), rgba(255, 200, 240, 0.6)) !important;
+  border-radius: 10px;
+  color: #0a2b50 !important;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+/* Ativo – mesmo degradê translúcido */
+.navbar-item.is-active,
+.navbar-item.is-active a {
+  background: linear-gradient(90deg, rgba(180, 220, 255, 0.7), rgba(250, 200, 255, 0.7)) !important;
+  border-radius: 12px;
+  color: #0a2850 !important;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 15px rgba(200, 200, 255, 0.3);
+}
+
+/* 📱 Responsivo – mantém o mesmo degradê */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 8px;
+  }
+
+  .navbar-item {
+    margin: 6px 8px;
+    font-size: 15px;
+  }
+}
+
+
+/* 💙 Navbar ativa e hover com melhor contraste */
+.navbar-item.is-active {
+  background: rgba(163, 216, 255, 0.45); /* azul pastel mais visível */
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  color: #003366 !important; /* azul escuro para contraste */
+  font-weight: 600;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 15px rgba(163, 216, 255, 0.5);
+}
+
+/* 💫 Hover rosa-azulado mais legível */
+.navbar-item:hover {
+  background: linear-gradient(90deg, rgba(163, 216, 255, 0.4), rgba(255, 182, 226, 0.4));
+  border-radius: 12px;
+  color: #003366 !important;
+  font-weight: 600;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+/* ✨ Texto normal branco visível */
+.navbar-item {
+  color: #ffffff !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* 📱 Corrige a ordem no layout mobile */
+@media screen and (max-width: 768px) {
+  .columns {
+    display: flex;
+    flex-direction: column-reverse !important; /* mostra os posts primeiro */
+  }
+
+  .column-main {
+    order: 1 !important; /* conteúdo principal vem primeiro */
+  }
+
+  .column-left,
+  .column-right {
+    order: 2 !important; /* barra lateral vem depois */
+  }
+
+  /* Ajusta margens e alinhamento no mobile */
+  .column-main,
+  .column-left,
+  .column-right {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* Centraliza avatar e infos */
+  .profile {
+    text-align: center;
+  }
+}
+
+
+
+/* Ícones e textos do menu */
+.navbar-item a,
+.navbar-link {
+  color: #243a5e !important; /* azul suave legível */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Hover com leve destaque */
+.navbar-item a:hover {
+  color: #1e2a44 !important;
+}
+
+/* Corrige o layout mobile do menu */
+.navbar-menu {
+  background: linear-gradient(180deg, #c8dfff 0%, #f8d3ff 100%) !important;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Ajuste de responsividade */
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-item {
+    margin: 6px 0;
+  }
+
+  .navbar-brand img {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 5px;
+  }
+}
+
+
+
+/* 🌈 Correção final: mantém degradê e layout horizontal no mobile */
+.navbar {
+  background: linear-gradient(90deg, #b8d9ff 0%, #f8cfff 100%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: nowrap !important;
+  box-shadow: 0 2px 8px rgba(160, 190, 255, 0.25);
+  border: none;
+}
+
+/* Garante que o menu sempre apareça ao lado do logo */
+.navbar-menu {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* Itens do menu lado a lado */
+.navbar-item {
+  display: inline-block !important;
+  color: #ffffff !important;
+  font-weight: 500;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+/* Hover e ativo com leve contraste */
+.navbar-item:hover,
+.navbar-item.is-active {
+  color: #0a2b50 !important;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+}
+
+/* Mantém ícones no mesmo nível */
+.navbar-end {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 12px;
+}
+
+/* 📱 Mobile: mantém horizontal e centraliza tudo */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    padding: 10px;
+  }
+
+  .navbar-menu {
+    flex-wrap: wrap !important;
+  }
+
+  .navbar-item {
+    margin: 5px 8px;
+    font-size: 15px;
+  }
+
+  .navbar-end {
+    justify-content: center !important;
+    margin-top: 6px;
+  }
+}
+
+
+/* 📱 Esconde o painel de perfil no modo mobile e mantém só o conteúdo */
+@media screen and (max-width: 768px) {
+  .profile,
+  .card.profile,
+  .widget-wrap.profile {
+    display: none !important;
+  }
+
+  /* Deixa o conteúdo principal ocupar toda a largura */
+  .column-main {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Remove margens extras do layout */
+  .columns {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Ajuste opcional: centraliza cards e posts */
+  .card {
+    margin: 0 auto 20px auto !important;
+    width: 95% !important;
+  }
+}
+
+
+/* 🔹 Oculta o perfil apenas na página "About" (Sobre Mim) */
+.page-about .profile,
+.page-about .card.profile,
+.page-about .widget-wrap.profile {
+  display: none !important;
+}
+
+/* Ajusta o layout quando o perfil é removido */
+.page-about .column-main {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.page-about .columns {
+  margin: 0 !important;
+  padding: 0 !important;
+}
