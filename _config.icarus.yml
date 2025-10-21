@@ -196,6 +196,8 @@ widgets:
     # Widget de Perfil
     - type: profile
       position: left
+      exclude:
+        - about
       author: Near
       # O | abaixo permite que o texto tenha múltiplas linhas
       author_title: 'Graduado em Análise e Desenvolvimento de Sistemas | PUCPR 
