@@ -395,3 +395,36 @@ button:hover, .btn:hover {
   margin: 0 !important;
   padding: 0 !important;
 }
+
+
+
+/* 🌸 Mostra o perfil "Near" apenas na Home e esconde nos celulares em outras páginas */
+@media screen and (max-width: 768px) {
+  /* Esconde widgets laterais (como o perfil) em todas as páginas,
+     exceto quando o link "Home" está ativo */
+  body:not(:has(a.navbar-item.is-active[href="/"])) .column-left .card.widget,
+  body:not(:has(a.navbar-item.is-active[href="/"])) .column-right .card.widget {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Ajusta layout quando o perfil some */
+  .column-main {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .columns {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .card {
+    margin: 0 auto 20px auto !important;
+    width: 95% !important;
+  }
+}
