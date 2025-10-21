@@ -125,3 +125,63 @@ button:hover, .btn:hover {
 ::-webkit-scrollbar-track {
   background: #ffffff50;
 }
+
+
+/* 💙 Navbar ativa e hover com melhor contraste */
+.navbar-item.is-active {
+  background: rgba(163, 216, 255, 0.45); /* azul pastel mais visível */
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  color: #003366 !important; /* azul escuro para contraste */
+  font-weight: 600;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 15px rgba(163, 216, 255, 0.5);
+}
+
+/* 💫 Hover rosa-azulado mais legível */
+.navbar-item:hover {
+  background: linear-gradient(90deg, rgba(163, 216, 255, 0.4), rgba(255, 182, 226, 0.4));
+  border-radius: 12px;
+  color: #003366 !important;
+  font-weight: 600;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+/* ✨ Texto normal branco visível */
+.navbar-item {
+  color: #ffffff !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* 📱 Corrige a ordem no layout mobile */
+@media screen and (max-width: 768px) {
+  .columns {
+    display: flex;
+    flex-direction: column-reverse !important; /* mostra os posts primeiro */
+  }
+
+  .column-main {
+    order: 1 !important; /* conteúdo principal vem primeiro */
+  }
+
+  .column-left,
+  .column-right {
+    order: 2 !important; /* barra lateral vem depois */
+  }
+
+  /* Ajusta margens e alinhamento no mobile */
+  .column-main,
+  .column-left,
+  .column-right {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* Centraliza avatar e infos */
+  .profile {
+    text-align: center;
+  }
+}
