@@ -662,3 +662,11 @@ a.link-muted:hover::after {
   50% { background-position: 100% center; }
   100% { background-position: 0% center; }
 }
+
+
+/* 🌸 Faz o texto do título do autor respeitar quebras de linha */
+.widget[data-type="profile"] .is-size-6.is-block {
+  white-space: pre-line; /* interpreta as quebras do YAML */
+  line-height: 1.5;
+  margin-bottom: 0.5em;
+}
