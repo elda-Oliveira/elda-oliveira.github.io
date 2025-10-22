@@ -1022,7 +1022,7 @@ body:not(.dark-mode) #theme-toggle i {
 
 /* 🌸 Ícone do modo escuro (rosa neon) */
 body.dark-mode #theme-toggle i {
-  color: #ff8ccf !important;
+  color: #ffa7c4 !important;
   text-shadow: 0 0 10px rgba(255, 150, 220, 0.8);
 }
 
