@@ -670,3 +670,347 @@ a.link-muted:hover::after {
   line-height: 1.5;
   margin-bottom: 0.5em;
 }
+
+
+/* 🌙 ===== MODO ESCURO SUAVE COM DEGRADÊ ===== */
+body.dark-mode {
+  background: linear-gradient(180deg, #1a2750 0%, #1d2e63 40%, #15224b 80%, #101a36 100%);
+  color: #e8eeff;
+  transition: background 0.6s ease, color 0.6s ease;
+  --accent: #6aa9ff;
+  --accent-soft: #95c4ff;
+  --surface: rgba(25, 38, 75, 0.9);
+  --surface-light: rgba(35, 55, 100, 0.8);
+  --text-light: #f2f6ff;
+  --text-muted: #b7c5e6;
+  --border-light: rgba(140, 180, 255, 0.2);
+}
+
+/* 🧭 Navbar */
+body.dark-mode .navbar {
+  background: linear-gradient(90deg, #1a2852 10%, #2141a3c2 50%, #5195e9) !important;
+  border-bottom: 1px solid rgba(120, 160, 255, 0.2);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .navbar-item,
+body.dark-mode .navbar a {
+  color: #e7eeff !important;
+}
+
+body.dark-mode .navbar-item:hover {
+  background: linear-gradient(90deg, #284081 0%, #2c4d99 100%) !important;
+  color: #ffffff !important;
+  border-radius: 10px;
+}
+
+
+
+/* 🧊 Cards e Widgets */
+body.dark-mode .card,
+body.dark-mode .widget {
+  background: rgba(35, 50, 90, 0.267) !important;
+  border: 1px solid rgba(140, 180, 255, 0.18);
+  backdrop-filter: blur(10px);
+  color: var(--text-light) !important;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  transition: all 0.4s ease;
+}
+
+body.dark-mode .card:hover,
+body.dark-mode .widget:hover {
+  box-shadow: 0 6px 25px rgba(110, 160, 255, 0.4);
+  transform: translateY(-3px);
+}
+
+/* ✨ Títulos */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode .title {
+  color: var(--accent-soft) !important;
+  text-shadow: 0 0 10px rgb(43, 43, 75);
+}
+
+body.dark-mode .title {
+    color: #95c4ff !important;
+    text-shadow: 0 0 10px rgb(43, 43, 75);
+}
+
+.le
+/* 📘 Links */
+body.dark-mode a {
+  color: var(--accent);
+  transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+
+body.dark-mode a:hover {
+  color: #b9d4ff;
+  text-shadow: 0 0 6px rgba(150, 190, 255, 0.5);
+}
+
+/* 🔹 Linhas e divisores */
+body.dark-mode hr,
+body.dark-mode .section-header::after {
+  background: linear-gradient(90deg, #6baeff 0%, #a4b8ff 100%) !important;
+  opacity: 0.8;
+}
+
+/* 📄 Texto */
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode small {
+  color: #f5f5f5 !important;
+}
+
+/* 🧠 Citações */
+body.dark-mode blockquote {
+  border-left: 3px solid var(--accent);
+  background: rgba(45, 65, 115, 0.6);
+  color: #e1eaff;
+  font-style: italic;
+  border-radius: 8px;
+}
+
+/* 💾 Código */
+body.dark-mode pre,
+body.dark-mode code {
+  background: #182a58 !important;
+  border-radius: 6px;
+  color: #bcd4ff !important;
+}
+
+/* 💫 Transições */
+* {
+  transition: background 0.4s ease, color 0.4s ease, border 0.4s ease, box-shadow 0.4s ease;
+}
+
+
+/* 🌟 Títulos de posts (link-muted) em branco no modo escuro */
+body.dark-mode a.link-muted,
+body.dark-mode .link-muted {
+  color: #ffffff !important;
+  text-shadow: 0 0 10px rgba(200, 220, 255, 0.2);
+  font-weight: 600;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+
+
+/* 🌸 Rosa quando passa o mouse */
+body.dark-mode a.link-muted:hover {
+  color: #95c4ff !important; /* rosa suave do seu tema */
+  transform: scale(1.02);
+}
+
+/* 💫 Rosa mais intenso quando o link já foi clicado */
+body.dark-mode a.link-muted:active {
+  color: #95c4ff !important;
+  text-shadow: 0 0 10px rgba(160, 166, 255, 0.6);
+}
+
+
+body.dark-mode a.link-muted:hover::after {
+  opacity: 1;
+  background: linear-gradient(90deg, #a7bcff, #7ac4ff);
+}
+
+
+
+/* ✨ Corrige texto forte (<strong>) no modo escuro */
+body.dark-mode strong,
+body.dark-mode b {
+  color: #ffffff !important;
+  font-weight: 600;
+  text-shadow: 0 0 8px rgba(200, 220, 255, 0.25);
+}
+
+/* 💙 Deixa os títulos das seções laterais em azul pastel */
+body.dark-mode .menu-label,
+body.dark-mode .widget .menu-label,
+body.dark-mode .widget h3,
+body.dark-mode .widget h4 {
+  color: #ffa7c4 !important; /* azul pastel do tema */
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-shadow: 0 1px 6px rgba(255, 160, 255, 0.5);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* 🌈 Efeito leve no hover */
+body.dark-mode .menu-label:hover,
+body.dark-mode .widget h3:hover,
+body.dark-mode .widget h4:hover {
+  color: #d173e4 !important;
+  text-shadow: 0 0 10px rgba(255, 160, 255, 0.5);
+}
+
+
+
+/* 💫 LINKS DOS POSTS RECENTES (widget lateral) */
+body.dark-mode .card.widget article.media a {
+  color: #f5f3f3 !important; /* neutro normal */
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+/* 💙 Azul pastel ao passar o mouse */
+body.dark-mode .card.widget article.media a:hover {
+  color: #ffa7c4 !important; /* azul suave */
+  text-shadow: 0 0 6px rgba(160, 220, 255, 0.5);
+  transform: translateY(-1px);
+}
+
+/* 🔹 Remove a linha rosa decorativa */
+body.dark-mode .card.widget article.media a::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* ✨ Data e subtítulo neutros */
+body.dark-mode .card.widget article.media time,
+body.dark-mode .card.widget article.media .media-content {
+  color: #7a7a7a;
+  transition: color 0.3s ease;
+}
+
+/* 💫 Ficam azul pastel no hover */
+body.dark-mode .card.widget article.media a:hover time,
+body.dark-mode .card.widget article.media a:hover .media-content {
+  color: #ffa7c4;
+}
+
+/* 🌙 Ajusta as tags de links (ex: tryhackme.com, hackthebox.com) no modo escuro */
+
+body.dark-mode .widget .tag,
+body.dark-mode .level-item.tag {
+  background: linear-gradient(90deg, #4aa8ff, #7ac4ff);
+  color: #ffffff !important;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(70, 140, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+
+
+/* 💫 Efeito hover sutil */
+body.dark-mode .widget .tag:hover,
+body.dark-mode .level-item.tag:hover {
+  background: linear-gradient(90deg, #6cc3ff, #9fd8ff);
+  box-shadow: 0 0 12px rgba(120, 180, 255, 0.5);
+  transform: translateY(-1px);
+}
+
+/* 💎 Corrige fundo branco dos links (tryhackme, hackthebox) no modo escuro */
+body.dark-mode a.level,
+body.dark-mode a.level.is-mobile {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #b9d9ff !important;
+  transition: all 0.3s ease;
+}
+
+/* 🌟 Hover (ilumina o link levemente) */
+body.dark-mode a.level:hover,
+body.dark-mode a.level.is-mobile:hover {
+  color: #e6f2ff !important;
+  text-shadow: 0 0 8px rgba(120, 180, 255, 0.6);
+}
+
+/* 🩵 Estado ativo (quando clica) */
+body.dark-mode a.level:active,
+body.dark-mode a.level.is-mobile:active {
+  background: none !important;
+  color: #a4d4ff !important;
+  text-shadow: 0 0 10px rgba(150, 200, 255, 0.5);
+  transform: scale(0.98);
+}
+
+/* 🐾 Logo branca no modo escuro */
+body.dark-mode img.logo,
+body.dark-mode .navbar-brand img {
+  filter: brightness(0) invert(1);
+  opacity: 0.95;
+  transition: filter 0.4s ease, opacity 0.4s ease;
+}
+
+
+
+/* 🌙 Rodapé com o mesmo degradê da navbar no modo escuro */
+body.dark-mode .footer,
+body.dark-mode footer {
+  background: linear-gradient(90deg, #1a2852 10%, #2141a3c2 50%, #5195e9) !important;
+  border-top: 1px solid rgba(120, 160, 255, 0.2);
+  box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.3);
+  color: #dbe5ff !important;
+  text-align: center;
+  padding: 15px 0;
+  transition: background 0.5s ease, color 0.3s ease;
+}
+
+/* ✨ Links e ícones no rodapé */
+body.dark-mode .footer a {
+  color: #a7c8ff !important;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+body.dark-mode .footer a:hover {
+  color: #ffffff !important;
+  text-shadow: 0 0 10px rgba(150, 200, 255, 0.6);
+}
+
+/* 💠 Ícones */
+body.dark-mode .footer i {
+  color: #b5d2ff;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+body.dark-mode .footer i:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+/* 🌙 Deixa o logo branco no modo escuro */
+body.dark-mode .footer img,
+body.dark-mode .navbar img,
+body.dark-mode .logo img {
+  filter: brightness(0) invert(1);
+  opacity: 0.95;
+  transition: filter 0.4s ease, opacity 0.4s ease;
+}
+
+/* Suaviza o brilho ao passar o mouse */
+body.dark-mode .footer img:hover,
+body.dark-mode .navbar img:hover {
+  filter: brightness(1.2) invert(1);
+  opacity: 1;
+}
+
+/* 🌙/☀️ ícone de alternância */
+#theme-toggle i {
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+}
+
+/* Modo claro (lua dourada) */
+body:not(.dark-mode) #theme-toggle i {
+  color: #2660c4 !important;
+  text-shadow: 0 0 10px rgba(255, 200, 100, 0.6);
+}
+
+/* Modo escuro (sol rosa neon) */
+body.dark-mode #theme-toggle i {
+  color: #ff9ed6 !important;
+  text-shadow: 0 0 10px rgba(255, 130, 200, 0.8);
+}
+
+/* Hover animado */
+#theme-toggle:hover i {
+  transform: scale(1.2) rotate(10deg);
+}
