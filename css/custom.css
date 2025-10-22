@@ -1031,3 +1031,18 @@ body.dark-mode #theme-toggle i {
   transform: scale(1.15) rotate(12deg);
 }
 
+/* 🌸 Cor dos ícones e títulos das seções no modo claro */
+body:not(.dark-mode) .fa-graduation-cap,
+body:not(.dark-mode) .fa-bullseye,
+body:not(.dark-mode) .fa-link,
+body:not(.dark-mode) h2,
+body:not(.dark-mode) h3 {
+  color: #ffb6d5 !important; /* rosa suave */
+}
+
+/* 🌸 Linha de separação também rosa */
+body:not(.dark-mode) hr {
+  border-color: #ffb6d5 !important;
+  opacity: 0.6;
+}
+
